@@ -1,4 +1,6 @@
-FROM node:12.6
+ARG ARG_TEST=12.6
+ENV ENV_TEST=${ARG_TEST}
+FROM node:${ENV_TEST}
 EXPOSE 80
 COPY server.js .
 CMD node server.js
