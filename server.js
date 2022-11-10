@@ -6,8 +6,8 @@ var handleRequest = function(request, response) {
     response.end(JSON.stringify({
       "isBase64Encoded": false,
       "statusCode": 200,
-      "headers": {"Content-Type":"text/html"},
-      "body": "<html><body><h1>Heading</h1><p>Paragraph.</p></body></html>"
+      "headers": {"Content-Type":"application/json"},
+      "body": JSON.stringify({a: 1, b: 2, c: {d: 3}})
     }));
 };
 var www = http.createServer(handleRequest);
