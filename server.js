@@ -4,10 +4,10 @@ var handleRequest = function(request, response) {
     response.statusCode = 200;
     response.setHeader('Content-Type', 'application/json');
     response.end(JSON.stringify({
-      "isBase64Encoded": false,
-      "statusCode": 200,
-      "headers": {"Content-Type":"application/json"},
-      "body": JSON.stringify({a: 1, b: 2, c: {d: 3}})
+      isBase64Encoded: false,
+      statusCode: 200,
+      headers: {'content-type': 'application/json'},
+      body: JSON.stringify({code: 0, message: 'success', data: {a: 1, b:2, c: {d: 3}}})
     }));
 };
 var www = http.createServer(handleRequest);
